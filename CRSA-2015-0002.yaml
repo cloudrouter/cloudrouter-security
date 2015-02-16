@@ -17,14 +17,14 @@ affected-products:
     - id: 1.0-beta
       component: opendaylight-helium
       issues:
-        - TODO
+        - 8
       patches:
         - TODO
 
 vulnerabilities:
 
   - cve-id: CVE-2015-1610
-    issue: 
+    cloudrouter-security-issue: 2
     impact-assessment:
       source: 'IIX Product Security'
       rating: moderate
