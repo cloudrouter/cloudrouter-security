@@ -1,0 +1,45 @@
+title: 'OpenDaylight openflowplugin allows topology spoofing via host tracking'
+
+description: 'It has been reported that it is possible for an attacker to spoof
+  network topology via host tracking. An attacker can abuse host tracking by updating
+  the host location information without any validation, authentication or
+  authorization. This makes it possible to impersonate other network devices by
+  obtaining their MAC address. This issue is related to well-known MAC spoofing
+  attacks. Further technical details are available in a conference paper.'
+
+references: 
+  - http://www.internetsociety.org/sites/default/files/10_4_2.pdf
+
+affected-products:
+
+  - product: CloudRouter
+    version:
+    - id: 1.0-beta
+      component: opendaylight-helium
+      issues:
+        - TODO
+      patches:
+        - TODO
+
+vulnerabilities:
+
+  - cve-id: CVE-2015-1610
+    issue: 
+    impact-assessment:
+      source: 'IIX Product Security'
+      rating: moderate
+      assessment:
+        type: CVSS2
+        score: 4.3
+        detail: AV:A/AC:M/Au:N/C:N/I:P/A:P
+    classification:
+      source: 'IIX Product Security'
+      type: CWE
+      detail: TODO
+
+reporters:
+
+  - name: 'Lei Xu'
+    affiliation: 'Texas A&M'
+    reported:
+      - CVE-2015-1610
