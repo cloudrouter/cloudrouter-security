@@ -17,7 +17,8 @@ affected-products:
         issues:
           - 7
         patches:
-          - TODO
+          - https://git.opendaylight.org/gerrit/#/c/16193/
+          - https://git.opendaylight.org/gerrit/#/c/16208/
 
 vulnerabilities:
 
