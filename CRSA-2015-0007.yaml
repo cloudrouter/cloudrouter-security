@@ -1,0 +1,40 @@
+title: 'ONOS: denial-of-service (DoS) due to exception handling while deserializing jumbo frames'
+
+description: 'It was found that the packet deserializers in ONOS would throw exceptions when handling malformed, truncated or maliciously-crafted packets. The exceptions were not caught and handled, which would result in the relevant switch being disconnected because an exception occurred in an I/O thread. A remote unauthenticated attacker could use this flaw to perform a denial-of-service (DoS) attack by causing ONOS to disconnect switches.'
+
+references:
+  - https://wiki.onosproject.org/display/ONOS/Security+advisories
+
+affected-products:
+
+  - product: CloudRouter
+    version:
+      - id: 1.0-beta
+        component: onos
+        issues:
+          - 143
+        patches:
+          - https://gerrit.onosproject.org/#/c/2207/
+
+vulnerabilities:
+
+  - cve-id: CVE-2015-3414
+    cloudrouter-security-issue: 6
+    impact-assessment:
+      source: 'IIX Product Security'
+      rating: moderate
+      assessment:
+        type: CVSS2
+        score: 3.7
+        detail: AV:L/AC:H/Au:N/C:P/I:P/A:P
+    classification:
+      source: 'IIX Product Security'
+      type: CWE
+      detail: TODO
+
+reporters:
+
+  - name: ''
+    reported:
+      - CVE-2015-3414
+      - CVE-2015-3416
