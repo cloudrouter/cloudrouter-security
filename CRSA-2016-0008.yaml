@@ -1,0 +1,29 @@
+
+title: 'Open vSwitch: MPLS buffer overflow'
+
+description: 'It was found that multiple versions of Open vSwitch are vulnerable to remote buffer overflow attacks, in which crafted MPLS packets could overflow the buffer reserved for MPLS labels in an OVS internal data structure.'
+
+references:
+  - http://openvswitch.org/pipermail/announce/2016-March/000082.html
+  - http://openvswitch.org/pipermail/announce/2016-March/000083.html
+
+affected-products:
+
+  - product: Open vSwitch
+    version:
+      - id: 2.4.x
+        component: openvswitch
+        issues:
+          - 158
+        patches:
+          - http://openvswitch.org/pipermail/announce/2016-March/000083.html
+
+vulnerabilities:
+
+  - cve-id: CVE-2016-2074
+
+reporters:
+
+  - name: 'Kashyap Thimmaraju and Bhargava Shastry'
+    reported:
+      - CVE-2016-2074
